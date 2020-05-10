@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+mgn/attr_show
+mgn/experiment/*
+mgn/sysu_attr
+mgn/sysu_attr_show
+mgn/show
+Cross-Modal-Re-ID-baseline/checkpoint/*
+Cross-Modal-Re-ID-baseline/CMC_Curve.png
+Cross-Modal-Re-ID-baseline/log
+Cross-Modal-Re-ID-baseline/show
