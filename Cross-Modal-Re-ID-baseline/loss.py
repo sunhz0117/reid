@@ -293,7 +293,7 @@ class Rank_loss(nn.Module):
             an_sum_intra = torch.sum(torch.mul(self.alpha_1-an_less_intra,an_weight_intra))
             an_sum_cross = torch.sum(torch.mul(self.alpha_2-an_less_cross,an_weight_cross))
 
-            loss_an =torch.div(an_sum_intra,an_weight_intra_sum ) +torch.div(an_sum_cross,an_weight_cross_sum )
+            loss_an = torch.div(an_sum_intra,an_weight_intra_sum ) + torch.div(an_sum_cross,an_weight_cross_sum )
             #loss_an = torch.div(an_sum_cross,an_weight_cross_sum )
             loss += loss_ap + loss_an
             #loss += loss_an

@@ -17,7 +17,7 @@ parser.add_argument("--epochs", type=int, default=400, help='number of epochs to
 parser.add_argument('--test_every', type=int, default=50, help='do test per every N epochs')
 parser.add_argument("--batchid", type=int, default=16, help='the batch for id')
 parser.add_argument("--batchimage", type=int, default=4, help='the batch of per id')
-parser.add_argument("--batchtest", type=int, default=8, help='input batch size for test')
+parser.add_argument("--batchtest", type=int, default=32, help='input batch size for test')
 parser.add_argument('--test_only', action='store_true', help='set this option to test the model')
 
 parser.add_argument('--model', default='MGN', help='model name')

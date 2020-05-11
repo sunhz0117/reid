@@ -64,14 +64,12 @@ class Loss(nn.modules.loss._Loss):
         losses = []
         for i, l in enumerate(self.loss):
             if l['type'] == 'Triplet':
-                embed()
                 loss = [l['function'](output, labels) for output in outputs[1:4]]
                 loss = sum(loss) / len(loss)
                 effective_loss = l['weight'] * loss
                 losses.append(effective_loss)
                 self.log[-1, i] += effective_loss.item()
             elif l['type'] == 'ID':
-                embed()
                 loss = [l['function'](output, labels) for output in outputs[4:12]]
                 loss = sum(loss) / len(loss)
                 effective_loss = l['weight'] * loss
@@ -80,7 +78,6 @@ class Loss(nn.modules.loss._Loss):
             elif l['type'] == 'Triplet_WRT':
                 pass
             elif l['type'] == 'Attribute':
-                embed()
                 loss = [l['function'](output, attribute) for output in outputs[12:15]]
                 loss = sum(loss) / len(loss)
                 effective_loss = l['weight'] * loss

@@ -42,7 +42,7 @@ parser.add_argument('--img_h', default=288, type=int,
                     metavar='imgh', help='img height')
 parser.add_argument('--batch-size', default=8, type=int,
                     metavar='B', help='training batch size')
-parser.add_argument('--test-batch', default=16, type=int,
+parser.add_argument('--test-batch', default=256, type=int,
                     metavar='tb', help='testing batch size')
 parser.add_argument('--method', default='agw', type=str,
                     metavar='m', help='method type: base or agw')
@@ -50,7 +50,7 @@ parser.add_argument('--margin', default=0.3, type=float,
                     metavar='margin', help='triplet loss margin')
 parser.add_argument('--num_pos', default=4, type=int,
                     help='num of pos per identity in each modality')
-parser.add_argument('--trial', default=2, type=int,
+parser.add_argument('--trial', default=10, type=int,
                             metavar='t', help='trial (only for RegDB dataset)')
 parser.add_argument('--seed', default=0, type=int,
                     metavar='t', help='random seed')
